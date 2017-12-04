@@ -12,29 +12,26 @@ private let kMaxNumberOfItems: Int = 10000
 
 public protocol MySuperCache {
     func get(imageAtURLString imageURLString: String, completionBlock: @escaping (UIImage?) -> Void)
-    func add(image: UIImage, withIdentifier: String)
+    func add(image: UIImage, withIdentifier: String, maxAge:Double)
 }
 
 open class CacheOrganiser: MySuperCache {
     var imagesCache = [MFSImage]()
     var maxAgeDoubleValue = 0.0
-
+    
     public func get(imageAtURLString imageURLString: String, completionBlock: @escaping (UIImage?) -> Void) {
         if let image = findImageWithId(imageID: imageURLString) {
             self.discardImageOverMaxAgeLimit(withIdentifier: imageURLString, completion: { (needsDownload) in
-                let shouldDownload = needsDownload
-                if shouldDownload {
-                    completionBlock (nil)
-                }
-                else{
+                if !needsDownload {
                     completionBlock (image)
                 }
             })
         }
+        completionBlock (nil)
     }
     
-    public func add(image: UIImage, withIdentifier: String) {
-        
+    public func add(image: UIImage, withIdentifier: String, maxAge: Double) {
+        addImageToCache(image: image, withIdentifier: withIdentifier, maxAge:maxAge)
     }
     
     class MFSImage : Equatable {
@@ -56,8 +53,9 @@ open class CacheOrganiser: MySuperCache {
             maxAge          = cachePeriod
         }
     }
+    
     func findImageWithId(imageID: String) -> UIImage? {
-        var retuningImage: MFSImage!
+        var retuningImage: MFSImage?
         if (self.imagesCache.count > 0) {
             for eachImage in self.imagesCache {
                 if eachImage.imageID == imageID {
@@ -65,18 +63,17 @@ open class CacheOrganiser: MySuperCache {
                     eachImage.accessCount = Int(eachImage.accessCount + 1)
                     eachImage.lastAccessTime = NSDate()
                     retuningImage = eachImage
+                    return UIImage(data:(retuningImage?.imageData as Data?)!)
                 }
             }
         }
-        return UIImage(data:retuningImage.imageData as Data)
+        return nil
     }
     
-    func addImageToCache(image: UIImage, withIdentifier: String) {
-        if !((self.findImageWithId(imageID: withIdentifier) != nil)) {
-            self.checkTodiscardOverCacheLimit()
-            let mfsImg = MFSImage (imgID: withIdentifier, imgData: (UIImagePNGRepresentation(image) as NSData?)!, preAccessTime: Date() as NSDate, numberOfRetrieval: 1, cachePeriod:maxAgeDoubleValue)
-            imagesCache.append(mfsImg)
-        }
+    func addImageToCache(image: UIImage, withIdentifier: String, maxAge:Double) {
+        self.checkTodiscardOverCacheLimit()
+        let mfsImg = MFSImage (imgID: withIdentifier, imgData: (UIImagePNGRepresentation(image) as NSData?)!, preAccessTime: Date() as NSDate, numberOfRetrieval: 1, cachePeriod:maxAge)
+        imagesCache.append(mfsImg)
     }
     
     func checkTodiscardOverCacheLimit() -> Void {
@@ -102,7 +99,7 @@ open class CacheOrganiser: MySuperCache {
         //What if there is no age limit?
         //Then discard the image and download again
         var imagesCacheCopy = [MFSImage]()
-
+        
         for img in self.imagesCache {
             if img.imageID == identifier {
                 //image found
@@ -111,11 +108,11 @@ open class CacheOrganiser: MySuperCache {
                 let discardNeed = lastAccessedTime < kDiscardInterval
                 if (discardNeed) {
                     let lockQueue = DispatchQueue(label: "self")
-    
+                    
                     lockQueue.sync {
                         imagesCacheCopy = self.imagesCache
                     }
-                    DispatchQueue.global(qos: .userInitiated).async { 
+                    DispatchQueue.global(qos: .userInitiated).async {
                         // 1
                         //Order the cache array based on the least used image
                         if let index = self.imagesCache.index(of:img) {
@@ -136,3 +133,4 @@ open class CacheOrganiser: MySuperCache {
         }
     }
 }
+
