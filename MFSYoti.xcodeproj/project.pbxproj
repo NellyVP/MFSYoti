@@ -17,6 +17,14 @@
 		1C1562D61FD48F2D008921B8 /* MySuperCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1562D21FD48F2D008921B8 /* MySuperCache.swift */; };
 		1C1562D71FD48F2D008921B8 /* MFSController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1562D41FD48F2D008921B8 /* MFSController.swift */; };
 		1C1562DC1FD5B762008921B8 /* MFSRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1562DB1FD5B762008921B8 /* MFSRequest.swift */; };
+		1C1562DF1FD6BD96008921B8 /* MFSCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1562DE1FD6BD96008921B8 /* MFSCollectionViewCell.swift */; };
+		1C1562EF1FD6D0E8008921B8 /* MFSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1562EE1FD6D0E8008921B8 /* MFSImage.swift */; };
+		1C1562F01FD6D0E8008921B8 /* MFSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1562EE1FD6D0E8008921B8 /* MFSImage.swift */; };
+		1C1562F11FD6D0E8008921B8 /* MFSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1562EE1FD6D0E8008921B8 /* MFSImage.swift */; };
+		1C1ECE431FD6F0940072B04B /* CALayer+ShadedRoundedLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1ECE411FD6F0930072B04B /* CALayer+ShadedRoundedLayer.m */; };
+		1C1ECE461FD6F5A00072B04B /* Refresh-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C1ECE451FD6F5A00072B04B /* Refresh-icon.png */; };
+		1C1ECE481FD6FCD20072B04B /* MFSMySuperCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1ECE471FD6FCD20072B04B /* MFSMySuperCacheTests.swift */; };
+		1C1ECE491FD6FD030072B04B /* MySuperCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1562D21FD48F2D008921B8 /* MySuperCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +61,13 @@
 		1C1562D21FD48F2D008921B8 /* MySuperCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySuperCache.swift; sourceTree = "<group>"; };
 		1C1562D41FD48F2D008921B8 /* MFSController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFSController.swift; sourceTree = "<group>"; };
 		1C1562DB1FD5B762008921B8 /* MFSRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFSRequest.swift; sourceTree = "<group>"; };
+		1C1562DE1FD6BD96008921B8 /* MFSCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFSCollectionViewCell.swift; sourceTree = "<group>"; };
+		1C1562EE1FD6D0E8008921B8 /* MFSImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFSImage.swift; sourceTree = "<group>"; };
+		1C1ECE401FD6F0920072B04B /* MFSYoti-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MFSYoti-Bridging-Header.h"; sourceTree = "<group>"; };
+		1C1ECE411FD6F0930072B04B /* CALayer+ShadedRoundedLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+ShadedRoundedLayer.m"; sourceTree = "<group>"; };
+		1C1ECE421FD6F0930072B04B /* CALayer+ShadedRoundedLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+ShadedRoundedLayer.h"; sourceTree = "<group>"; };
+		1C1ECE451FD6F5A00072B04B /* Refresh-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Refresh-icon.png"; path = "MFSYoti/Assets.xcassets/Refresh-icon.png"; sourceTree = "<group>"; };
+		1C1ECE471FD6FCD20072B04B /* MFSMySuperCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFSMySuperCacheTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +98,7 @@
 		1C1562941FD48E69008921B8 = {
 			isa = PBXGroup;
 			children = (
+				1C1ECE451FD6F5A00072B04B /* Refresh-icon.png */,
 				1C15629F1FD48E69008921B8 /* MFSYoti */,
 				1C1562B41FD48E69008921B8 /* MFSYotiTests */,
 				1C1562BF1FD48E69008921B8 /* MFSYotiUITests */,
@@ -103,11 +119,13 @@
 		1C15629F1FD48E69008921B8 /* MFSYoti */ = {
 			isa = PBXGroup;
 			children = (
-				1C1562DA1FD5B762008921B8 /* MFSRequest */,
+				1C1ECE401FD6F0920072B04B /* MFSYoti-Bridging-Header.h */,
+				1C1ECE441FD6F0980072B04B /* Custom CALayer */,
+				1C1562DD1FD6BD74008921B8 /* View */,
+				1C1562DA1FD5B762008921B8 /* Networking */,
 				1C1562D01FD48F2D008921B8 /* Entity */,
 				1C1562D31FD48F2D008921B8 /* MFSController */,
 				1C1562A01FD48E69008921B8 /* AppDelegate.swift */,
-				1C1562A21FD48E69008921B8 /* ViewController.swift */,
 				1C1562A41FD48E69008921B8 /* Main.storyboard */,
 				1C1562A71FD48E69008921B8 /* Assets.xcassets */,
 				1C1562A91FD48E69008921B8 /* LaunchScreen.storyboard */,
@@ -121,6 +139,7 @@
 			children = (
 				1C1562B51FD48E69008921B8 /* MFSYotiTests.swift */,
 				1C1562B71FD48E69008921B8 /* Info.plist */,
+				1C1ECE471FD6FCD20072B04B /* MFSMySuperCacheTests.swift */,
 			);
 			path = MFSYotiTests;
 			sourceTree = "<group>";
@@ -137,6 +156,7 @@
 		1C1562D01FD48F2D008921B8 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				1C1562EE1FD6D0E8008921B8 /* MFSImage.swift */,
 				1C1562D21FD48F2D008921B8 /* MySuperCache.swift */,
 			);
 			path = Entity;
@@ -150,12 +170,30 @@
 			path = MFSController;
 			sourceTree = "<group>";
 		};
-		1C1562DA1FD5B762008921B8 /* MFSRequest */ = {
+		1C1562DA1FD5B762008921B8 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				1C1562DB1FD5B762008921B8 /* MFSRequest.swift */,
 			);
-			path = MFSRequest;
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		1C1562DD1FD6BD74008921B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1C1562A21FD48E69008921B8 /* ViewController.swift */,
+				1C1562DE1FD6BD96008921B8 /* MFSCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1C1ECE441FD6F0980072B04B /* Custom CALayer */ = {
+			isa = PBXGroup;
+			children = (
+				1C1ECE421FD6F0930072B04B /* CALayer+ShadedRoundedLayer.h */,
+				1C1ECE411FD6F0930072B04B /* CALayer+ShadedRoundedLayer.m */,
+			);
+			path = "Custom CALayer";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +264,7 @@
 				TargetAttributes = {
 					1C15629C1FD48E69008921B8 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					1C1562B01FD48E69008921B8 = {
@@ -265,6 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C1ECE461FD6F5A00072B04B /* Refresh-icon.png in Resources */,
 				1C1562AB1FD48E69008921B8 /* LaunchScreen.storyboard in Resources */,
 				1C1562A81FD48E69008921B8 /* Assets.xcassets in Resources */,
 				1C1562A61FD48E69008921B8 /* Main.storyboard in Resources */,
@@ -292,11 +332,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C1562EF1FD6D0E8008921B8 /* MFSImage.swift in Sources */,
 				1C1562D71FD48F2D008921B8 /* MFSController.swift in Sources */,
+				1C1ECE431FD6F0940072B04B /* CALayer+ShadedRoundedLayer.m in Sources */,
 				1C1562A31FD48E69008921B8 /* ViewController.swift in Sources */,
 				1C1562DC1FD5B762008921B8 /* MFSRequest.swift in Sources */,
 				1C1562D61FD48F2D008921B8 /* MySuperCache.swift in Sources */,
 				1C1562A11FD48E69008921B8 /* AppDelegate.swift in Sources */,
+				1C1562DF1FD6BD96008921B8 /* MFSCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +347,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C1ECE481FD6FCD20072B04B /* MFSMySuperCacheTests.swift in Sources */,
+				1C1562F01FD6D0E8008921B8 /* MFSImage.swift in Sources */,
+				1C1ECE491FD6FD030072B04B /* MySuperCache.swift in Sources */,
 				1C1562B61FD48E69008921B8 /* MFSYotiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C1562F11FD6D0E8008921B8 /* MFSImage.swift in Sources */,
 				1C1562C11FD48E69008921B8 /* MFSYotiUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,12 +509,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DX838A7T8Z;
 				INFOPLIST_FILE = MFSYoti/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.voxygen.MFSYoti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MFSYoti/MFSYoti-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -477,12 +527,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DX838A7T8Z;
 				INFOPLIST_FILE = MFSYoti/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.voxygen.MFSYoti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MFSYoti/MFSYoti-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

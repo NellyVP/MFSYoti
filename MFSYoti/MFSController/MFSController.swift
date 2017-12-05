@@ -18,16 +18,19 @@ class MFSController: NSObject {
                                  "http://www.kapstadt.de/webcam.jpg"]
     
     func getImage(imageId: String, completionBlock: @escaping (UIImage?) -> Void) {
+        var cachedImage = UIImage()
+        
         cache.get(imageAtURLString: imageId) { (image) in
             if image != nil {
-                completionBlock(image)
+                cachedImage = image!
+                completionBlock (cachedImage)
             }
             else {
-                self.req.fetchImage(urlStr: imageId, completionBlock: { (image, maxAge) in
-                    if image != nil {
-                        //TODO: Here I need to pass max age info as well!
-                        self.cache.add(image: image!, withIdentifier: imageId, maxAge:maxAge )
-                        completionBlock(image)
+                self.req.fetchImage(urlStr: imageId, completionBlock: { (downloadedImage, maxAge) in
+                    if downloadedImage != nil {
+                        self.cache.add(image: downloadedImage!, withIdentifier: imageId, maxAge:maxAge )
+                        cachedImage = downloadedImage!
+                        completionBlock (cachedImage)
                     }
                 })
             }

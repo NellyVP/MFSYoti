@@ -25,33 +25,19 @@ open class CacheOrganiser: MySuperCache {
                 if !needsDownload {
                     completionBlock (image)
                 }
+                else {
+                    completionBlock (nil)
+                }
             })
         }
-        completionBlock (nil)
+        else {
+            completionBlock (nil)
+
+        }
     }
     
     public func add(image: UIImage, withIdentifier: String, maxAge: Double) {
         addImageToCache(image: image, withIdentifier: withIdentifier, maxAge:maxAge)
-    }
-    
-    class MFSImage : Equatable {
-        static func ==(lhs: CacheOrganiser.MFSImage, rhs: CacheOrganiser.MFSImage) -> Bool {
-            return lhs.imageID == rhs.imageID && lhs.imageData == rhs.imageData
-        }
-        
-        var imageID: String
-        var imageData: NSData
-        var lastAccessTime: NSDate
-        var maxAge: Double
-        var accessCount: Int
-        
-        init (imgID: String ,imgData: NSData, preAccessTime: NSDate, numberOfRetrieval: Int, cachePeriod: Double) {
-            imageID         = imgID
-            imageData       = imgData
-            lastAccessTime  = preAccessTime
-            accessCount     = numberOfRetrieval
-            maxAge          = cachePeriod
-        }
     }
     
     func findImageWithId(imageID: String) -> UIImage? {
@@ -103,9 +89,9 @@ open class CacheOrganiser: MySuperCache {
         for img in self.imagesCache {
             if img.imageID == identifier {
                 //image found
-                let kDiscardInterval = -img.maxAge
-                let lastAccessedTime = img.lastAccessTime.timeIntervalSinceNow
-                let discardNeed = lastAccessedTime < kDiscardInterval
+                let kDiscardInterval = -img.maxAge!
+                let lastAccessedTime = img.lastAccessTime?.timeIntervalSinceNow
+                let discardNeed = Double(lastAccessedTime!) < kDiscardInterval
                 if (discardNeed) {
                     let lockQueue = DispatchQueue(label: "self")
                     
@@ -131,6 +117,20 @@ open class CacheOrganiser: MySuperCache {
             }
             
         }
+    }
+    
+    func removeImageFromCache(identifier: String) -> Bool{
+
+        var removed = false
+        for img in self.imagesCache {
+            if img.imageID == identifier {
+                if let index = self.imagesCache.index(of:img) {
+                    self.imagesCache.remove(at:(index))
+                    removed = true
+                }
+            }
+        }
+        return removed
     }
 }
 

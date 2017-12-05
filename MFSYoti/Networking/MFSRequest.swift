@@ -9,11 +9,10 @@
 import Foundation
 import UIKit
 
-class MFSRequest { 
+class MFSRequest: NSObject, URLSessionDataDelegate, URLSessionTaskDelegate{
     func fetchImage(urlStr:String, completionBlock: @escaping (UIImage?, Double) -> Void)  {
         let url     = NSURL(string: urlStr)
         let request = URLRequest(url:url! as URL)
-
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             if error == nil {
@@ -36,5 +35,19 @@ class MFSRequest {
         }
         task.resume()
     }
+    
+    func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive response: URLResponse, completionHandler: @escaping (URLSession.ResponseDisposition) -> Void) {
+        print ("Method called")
+
+    }
+//    func URLSession(session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
+//        // println("download task did write data")
+//
+//        let progress = Float(totalBytesWritten) / Float(totalBytesExpectedToWrite)
+//
+//        DispatchQueue.main.async() {
+//            print (progress)
+//        }
+//    }
 }
 
