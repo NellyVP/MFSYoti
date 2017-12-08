@@ -21,11 +21,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ezg-qq-0me">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ezg-qq-0me">
                                 <rect key="frame" x="0.0" y="70" width="375" height="597"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="70"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vW8-cN-YFT">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vW8-cN-YFT">
                                     <size key="itemSize" width="362" height="350"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -33,7 +33,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="MFSCollectionViewCell" id="kMa-M6-GiI" customClass="MFSCollectionViewCell" customModule="MFSYoti" customModuleProvider="target">
-                                        <rect key="frame" x="6.5" y="0.0" width="362" height="350"/>
+                                        <rect key="frame" x="0.0" y="123.5" width="362" height="350"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="362" height="350"/>
@@ -62,6 +62,9 @@
                                                             <rect key="frame" x="163" y="137.5" width="37" height="37"/>
                                                             <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                         </activityIndicatorView>
+                                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lII-Mg-0Nh">
+                                                            <rect key="frame" x="8" y="326" width="347" height="2"/>
+                                                        </progressView>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -69,10 +72,13 @@
                                                         <constraint firstAttribute="trailing" secondItem="xdx-0L-RsD" secondAttribute="trailing" constant="4" id="HT7-3d-FaV"/>
                                                         <constraint firstItem="xdx-0L-RsD" firstAttribute="top" secondItem="76M-rR-tbO" secondAttribute="top" constant="8" id="IsE-Ow-FwK"/>
                                                         <constraint firstAttribute="bottom" secondItem="HVZ-5d-RQP" secondAttribute="bottom" constant="8" id="R8G-Nr-aB1"/>
+                                                        <constraint firstItem="lII-Mg-0Nh" firstAttribute="leading" secondItem="76M-rR-tbO" secondAttribute="leading" constant="8" id="UnF-3c-K1v"/>
                                                         <constraint firstItem="vRe-F9-X8W" firstAttribute="centerX" secondItem="xdx-0L-RsD" secondAttribute="centerX" id="VSn-sb-tfX"/>
                                                         <constraint firstItem="HVZ-5d-RQP" firstAttribute="centerX" secondItem="76M-rR-tbO" secondAttribute="centerX" id="ag8-tK-rg4"/>
+                                                        <constraint firstItem="lII-Mg-0Nh" firstAttribute="centerY" secondItem="HVZ-5d-RQP" secondAttribute="centerY" id="ied-JT-e0W"/>
                                                         <constraint firstItem="xdx-0L-RsD" firstAttribute="leading" secondItem="76M-rR-tbO" secondAttribute="leading" constant="4" id="ifw-wT-xu9"/>
                                                         <constraint firstItem="HVZ-5d-RQP" firstAttribute="top" secondItem="xdx-0L-RsD" secondAttribute="bottom" constant="8" id="rww-H6-jKc"/>
+                                                        <constraint firstAttribute="trailing" secondItem="lII-Mg-0Nh" secondAttribute="trailing" constant="8" id="tcw-4f-XUQ"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -88,6 +94,7 @@
                                             <outlet property="activityIdicator" destination="vRe-F9-X8W" id="Myn-JL-lFH"/>
                                             <outlet property="downloadButton" destination="HVZ-5d-RQP" id="Wh3-bd-Mum"/>
                                             <outlet property="msfImgView" destination="xdx-0L-RsD" id="Y3g-eK-ksJ"/>
+                                            <outlet property="progressView" destination="lII-Mg-0Nh" id="8bj-bR-fZs"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

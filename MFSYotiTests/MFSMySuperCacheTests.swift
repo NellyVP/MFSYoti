@@ -7,24 +7,12 @@
 //
 
 import XCTest
-
-class MFSMySuperCacheTests: XCTestCase {
-    var cache: CacheOrganiser = CacheOrganiser()
-    var baseMaxAge:Double = 6400
-    let imageIdentifier = "Yoti"
-    let lookupUIImage = UIImage(named: "Yoti")
-
+class MFSMySuperCacheTests: BaseTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-    
-    func createMFSImageFromUIImage() -> MFSImage {
-        let data = UIImagePNGRepresentation(lookupUIImage!)! as NSData
-        let mfsImg   = MFSImage(imgID: String().md5(imageIdentifier), imgURL: imageIdentifier, imgData: data, preAccessTime: Date() as NSDate, numberOfRetrieval: 1, cachePeriod: baseMaxAge)
-        return mfsImg
-        
-    }
+
     func testThatCacheOrganiserCanBeInitialized() {
         // Given
         var cache: CacheOrganiser? = CacheOrganiser()
@@ -136,17 +124,5 @@ class MFSMySuperCacheTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
+
 }

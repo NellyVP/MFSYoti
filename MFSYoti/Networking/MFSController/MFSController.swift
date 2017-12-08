@@ -16,7 +16,8 @@ class MFSController: NSObject {
                                  "http://www.kapstadt.de/webcam.jpg"]
     
     var cache: CacheOrganiser = CacheOrganiser()
-    let req: MFSRequest = MFSRequest ()
+    var modelFactory = ModelFactory()
+    let session = DownloadManager.shared.activate()
 
     
     func getImage(imageId: String, completionBlock: @escaping (UIImage?) -> Void) {
@@ -25,13 +26,14 @@ class MFSController: NSObject {
                 completionBlock (image)
             }
             else {
-                self.req.fetchImage(urlStr: imageId, completionBlock: { (image) in
-                    if image != nil{
-                        self.cache.addImageToCache(image: image!)
-                        let img = UIImage(data: (image?.imageData)! as Data)
-                        completionBlock(img!)
-                    }
-                })
+                let url = URL(string: imageId)!
+                let task = DownloadManager.shared.activate().downloadTask(with: url)
+                DownloadManager.shared.onCompletionHandler = { (image, response) in
+                    let downloadedImage = self.modelFactory.createImageFrom(urlString: imageId, data: UIImagePNGRepresentation(image)!, response: response )
+                    self.cache.addImageToCache(image: downloadedImage)
+                    completionBlock(image)
+                }
+                task.resume()
             }
         }
     }

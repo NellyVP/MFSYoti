@@ -16,7 +16,6 @@
 		1C1562C11FD48E69008921B8 /* MFSYotiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1562C01FD48E69008921B8 /* MFSYotiUITests.swift */; };
 		1C1562D61FD48F2D008921B8 /* MySuperCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1562D21FD48F2D008921B8 /* MySuperCache.swift */; };
 		1C1562D71FD48F2D008921B8 /* MFSController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1562D41FD48F2D008921B8 /* MFSController.swift */; };
-		1C1562DC1FD5B762008921B8 /* MFSRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1562DB1FD5B762008921B8 /* MFSRequest.swift */; };
 		1C1562DF1FD6BD96008921B8 /* MFSCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1562DE1FD6BD96008921B8 /* MFSCollectionViewCell.swift */; };
 		1C1562EF1FD6D0E8008921B8 /* MFSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1562EE1FD6D0E8008921B8 /* MFSImage.swift */; };
 		1C1562F01FD6D0E8008921B8 /* MFSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1562EE1FD6D0E8008921B8 /* MFSImage.swift */; };
@@ -26,6 +25,13 @@
 		1C1ECE481FD6FCD20072B04B /* MFSMySuperCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1ECE471FD6FCD20072B04B /* MFSMySuperCacheTests.swift */; };
 		1C1ECE491FD6FD030072B04B /* MySuperCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1562D21FD48F2D008921B8 /* MySuperCache.swift */; };
 		1C9190A61FD97BE90045019B /* String+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9190A51FD97BE90045019B /* String+Utility.swift */; };
+		1C9190AB1FDAB5000045019B /* BaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9190AA1FDAB5000045019B /* BaseTestCase.swift */; };
+		1C9190AD1FDACCC10045019B /* MFSRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9190AC1FDACCC10045019B /* MFSRequestTests.swift */; };
+		1C9190AF1FDACD1E0045019B /* ModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9DFB31FD82DBA0091569D /* ModelFactory.swift */; };
+		1C9190B11FDACDAA0045019B /* MFSControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9190B01FDACDAA0045019B /* MFSControllerTests.swift */; };
+		1C9190B41FDAD2EE0045019B /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9190B31FDAD2EE0045019B /* DownloadManager.swift */; };
+		1C9190B81FDAD5240045019B /* MFSController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1562D41FD48F2D008921B8 /* MFSController.swift */; };
+		1C9190BA1FDAD5330045019B /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9190B31FDAD2EE0045019B /* DownloadManager.swift */; };
 		1CD9DFB11FD716A40091569D /* Yoti.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CD9DFB01FD716A40091569D /* Yoti.png */; };
 		1CD9DFB41FD82DBA0091569D /* ModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9DFB31FD82DBA0091569D /* ModelFactory.swift */; };
 /* End PBXBuildFile section */
@@ -63,7 +69,6 @@
 		1C1562C21FD48E69008921B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C1562D21FD48F2D008921B8 /* MySuperCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySuperCache.swift; sourceTree = "<group>"; };
 		1C1562D41FD48F2D008921B8 /* MFSController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFSController.swift; sourceTree = "<group>"; };
-		1C1562DB1FD5B762008921B8 /* MFSRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFSRequest.swift; sourceTree = "<group>"; };
 		1C1562DE1FD6BD96008921B8 /* MFSCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFSCollectionViewCell.swift; sourceTree = "<group>"; };
 		1C1562EE1FD6D0E8008921B8 /* MFSImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFSImage.swift; sourceTree = "<group>"; };
 		1C1ECE401FD6F0920072B04B /* MFSYoti-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MFSYoti-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -72,6 +77,10 @@
 		1C1ECE451FD6F5A00072B04B /* Refresh-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Refresh-icon.png"; sourceTree = "<group>"; };
 		1C1ECE471FD6FCD20072B04B /* MFSMySuperCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFSMySuperCacheTests.swift; sourceTree = "<group>"; };
 		1C9190A51FD97BE90045019B /* String+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utility.swift"; sourceTree = "<group>"; };
+		1C9190AA1FDAB5000045019B /* BaseTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTestCase.swift; sourceTree = "<group>"; };
+		1C9190AC1FDACCC10045019B /* MFSRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MFSRequestTests.swift; path = MFSYotiTests/MFSRequestTests.swift; sourceTree = SOURCE_ROOT; };
+		1C9190B01FDACDAA0045019B /* MFSControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFSControllerTests.swift; sourceTree = "<group>"; };
+		1C9190B31FDAD2EE0045019B /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		1CD9DFB01FD716A40091569D /* Yoti.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yoti.png; sourceTree = "<group>"; };
 		1CD9DFB31FD82DBA0091569D /* ModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,9 +152,12 @@
 		1C1562B41FD48E69008921B8 /* MFSYotiTests */ = {
 			isa = PBXGroup;
 			children = (
+				1C9190AC1FDACCC10045019B /* MFSRequestTests.swift */,
 				1C1562B51FD48E69008921B8 /* MFSYotiTests.swift */,
 				1C1562B71FD48E69008921B8 /* Info.plist */,
 				1C1ECE471FD6FCD20072B04B /* MFSMySuperCacheTests.swift */,
+				1C9190AA1FDAB5000045019B /* BaseTestCase.swift */,
+				1C9190B01FDACDAA0045019B /* MFSControllerTests.swift */,
 			);
 			path = MFSYotiTests;
 			sourceTree = "<group>";
@@ -179,8 +191,8 @@
 		1C1562DA1FD5B762008921B8 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				1C9190BB1FDAF3B20045019B /* DownloadManager */,
 				1C1562D31FD48F2D008921B8 /* MFSController */,
-				1C1562DB1FD5B762008921B8 /* MFSRequest.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -219,6 +231,14 @@
 				1C1ECE451FD6F5A00072B04B /* Refresh-icon.png */,
 			);
 			path = Supporting;
+			sourceTree = "<group>";
+		};
+		1C9190BB1FDAF3B20045019B /* DownloadManager */ = {
+			isa = PBXGroup;
+			children = (
+				1C9190B31FDAD2EE0045019B /* DownloadManager.swift */,
+			);
+			path = DownloadManager;
 			sourceTree = "<group>";
 		};
 		1CD9DFB21FD82D9B0091569D /* ModelController */ = {
@@ -367,11 +387,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C1562EF1FD6D0E8008921B8 /* MFSImage.swift in Sources */,
+				1C9190B41FDAD2EE0045019B /* DownloadManager.swift in Sources */,
 				1C1562D71FD48F2D008921B8 /* MFSController.swift in Sources */,
 				1C1ECE431FD6F0940072B04B /* CALayer+ShadedRoundedLayer.m in Sources */,
 				1C9190A61FD97BE90045019B /* String+Utility.swift in Sources */,
 				1C1562A31FD48E69008921B8 /* ViewController.swift in Sources */,
-				1C1562DC1FD5B762008921B8 /* MFSRequest.swift in Sources */,
 				1CD9DFB41FD82DBA0091569D /* ModelFactory.swift in Sources */,
 				1C1562D61FD48F2D008921B8 /* MySuperCache.swift in Sources */,
 				1C1562A11FD48E69008921B8 /* AppDelegate.swift in Sources */,
@@ -385,7 +405,13 @@
 			files = (
 				1C1ECE481FD6FCD20072B04B /* MFSMySuperCacheTests.swift in Sources */,
 				1C1562F01FD6D0E8008921B8 /* MFSImage.swift in Sources */,
+				1C9190B81FDAD5240045019B /* MFSController.swift in Sources */,
+				1C9190BA1FDAD5330045019B /* DownloadManager.swift in Sources */,
+				1C9190AB1FDAB5000045019B /* BaseTestCase.swift in Sources */,
+				1C9190B11FDACDAA0045019B /* MFSControllerTests.swift in Sources */,
 				1C1ECE491FD6FD030072B04B /* MySuperCache.swift in Sources */,
+				1C9190AD1FDACCC10045019B /* MFSRequestTests.swift in Sources */,
+				1C9190AF1FDACD1E0045019B /* ModelFactory.swift in Sources */,
 				1C1562B61FD48E69008921B8 /* MFSYotiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

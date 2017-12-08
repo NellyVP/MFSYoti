@@ -18,26 +18,44 @@ class MFSCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var msfImgView: UIImageView!
     @IBOutlet weak var activityIdicator: UIActivityIndicatorView!
     @IBOutlet weak var downloadButton: UIButton!
-
+    @IBOutlet weak var progressView: UIProgressView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         downloadButton.layer .makeShadedRounded(withCornerRadius: 5.0, borderColor: UIColor.lightGray)
         downloadButton.layer.borderWidth = 1
+        updateProgessbar(progress: 0.0)
+        progressView.isHidden = true
+    }
+    
+    override func prepareForReuse() {
+        msfImgView.image = nil
+        downloadButton.isHidden = false
+        progressView.isHidden = true
     }
     
     @IBAction func downloadButtonTapped(_ sender: AnyObject) {
-        if (msfImgView.image != nil) {
-            msfImgView.image = nil
-        }
-        self.activityIdicator.startAnimating()
-        self.downloadButton.isHidden = true
+        activityIdicator.startAnimating()
+        downloadButton.isHidden = true
+        progressView.isHidden = false
         cellDelegate?.downloadButtonTapped(self)
+        DownloadManager.shared.onProgress = { (progress) in
+            OperationQueue.main.addOperation {
+                self.updateProgessbar(progress: progress)
+            }
+        }
     }
    
+    func updateProgessbar(progress: Float) {
+        progressView.setProgress(progress, animated: true)
+        progressView.setNeedsDisplay()
+    }
+    
     func updateDisplay(image : UIImage) {
         msfImgView.image = image
-        self.downloadButton.isHidden = false
-        self.activityIdicator.stopAnimating()
+        downloadButton.isHidden = false
+        progressView.isHidden = true
+        updateProgessbar(progress: 0.0)
+        activityIdicator.stopAnimating()
     }
 }

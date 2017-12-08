@@ -90,124 +90,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MFSYoti/AppDelegate.swift"
-            timestampString = "534269059.771684"
+            timestampString = "534444165.202269"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
             endingLineNumber = "19"
             landmarkName = "application(_:didFinishLaunchingWithOptions:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MFSYoti/Entity/MySuperCache.swift"
-            timestampString = "534425664.181721"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "get(imageAtURLString:completionBlock:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MFSYoti/Entity/MySuperCache.swift"
-            timestampString = "534425664.18188"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "get(imageAtURLString:completionBlock:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MFSYoti/Entity/MySuperCache.swift"
-            timestampString = "534425664.182003"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "get(imageAtURLString:completionBlock:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MFSYoti/Entity/MySuperCache.swift"
-            timestampString = "534425664.182122"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "get(imageAtURLString:completionBlock:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MFSYoti.CacheOrganiser.get(imageAtURLString: Swift.String, completionBlock: (Swift.Optional&lt;__ObjC.UIImage&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MFSYoti"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nilofarvahabpoor/Desktop/MFSYoti/MFSYoti/Entity/MySuperCache.swift"
-                  timestampString = "534347886.832325"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "407">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MFSYoti.CacheOrganiser.get(imageAtURLString: Swift.String, completionBlock: (Swift.Optional&lt;__ObjC.UIImage&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MFSYoti"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nilofarvahabpoor/Desktop/MFSYoti/MFSYoti/Entity/MySuperCache.swift"
-                  timestampString = "534347886.833529"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "701">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MFSYoti/Entity/MySuperCache.swift"
-            timestampString = "534425664.182238"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "get(imageAtURLString:completionBlock:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -458,7 +346,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MFSYoti/Networking/MFSRequest.swift"
-            timestampString = "534425664.182982"
+            timestampString = "534442151.729934"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "17"
@@ -614,17 +502,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MFSYoti/Networking/DownloadManager.swift"
-            timestampString = "534346118.342839"
+            timestampString = "534442868.43812"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "urlSession(_:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:)"
-            landmarkType = "7">
+            startingLineNumber = "93"
+            endingLineNumber = "93">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -634,76 +520,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MFSYoti/Networking/DownloadManager.swift"
-            timestampString = "534346118.342897"
+            timestampString = "534442868.43826"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "urlSession(_:task:didCompleteWithError:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MFSYoti/Networking/DownloadManager.swift"
-            timestampString = "534346118.342961"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "calculateProgress(session:completionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MFSYoti/Networking/DownloadManager.swift"
-            timestampString = "534346118.343009"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "urlSession(_:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MFSYoti/Networking/DownloadManager.swift"
-            timestampString = "534346118.343153"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "urlSession(_:downloadTask:didFinishDownloadingTo:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MFSYoti/Networking/DownloadManager.swift"
-            timestampString = "534346118.34319"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "urlSession(_:dataTask:didReceive:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -762,43 +584,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MFSYotiTests/MFSMySuperCacheTests.swift"
-            timestampString = "534425664.184081"
+            timestampString = "534433153.15525"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "testThatCacheCanFindImageWithIdentifier()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MFSYotiTests/MFSMySuperCacheTests.swift"
-            timestampString = "534425664.18474"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "testThatCacheCanFindImageWithIdentifier()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MFSYotiTests/MFSMySuperCacheTests.swift"
-            timestampString = "534425664.185191"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "testThatCacheCanRemoveImageWithIdentifier()"
             landmarkType = "7">
          </BreakpointContent>
@@ -810,11 +600,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MFSYotiTests/MFSMySuperCacheTests.swift"
-            timestampString = "534425664.185549"
+            timestampString = "534433153.155807"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "testThatCacheCanRemoveImageWithIdentifier()"
             landmarkType = "7">
          </BreakpointContent>
@@ -826,12 +616,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MFSYotiTests/MFSMySuperCacheTests.swift"
-            timestampString = "534425664.185948"
+            timestampString = "534433153.156353"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "testThatCacheCanRemoveImageWithIdentifier()"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "testThatImageNeedsRedownload()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -842,12 +632,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MFSYotiTests/MFSMySuperCacheTests.swift"
-            timestampString = "534425664.186319"
+            timestampString = "534433153.156853"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "testThatCacheCanRemoveImageWithIdentifier()"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "testThatImageNeedsRedownload()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -858,12 +648,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MFSYotiTests/MFSMySuperCacheTests.swift"
-            timestampString = "534425664.186992"
+            timestampString = "534433153.157338"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "testThatCacheCanRemoveImageWithIdentifier()"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "testThatImageNeedsRedownload()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -874,172 +664,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MFSYotiTests/MFSMySuperCacheTests.swift"
-            timestampString = "534425664.187551"
+            timestampString = "534433153.157615"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "testThatCacheCanRemoveImageWithIdentifier()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MFSYoti/Entity/MySuperCache.swift"
-            timestampString = "534425664.188012"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "removeImageFromCache(image:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in MFSYoti.CacheOrganiser.removeImageFromCache(image: MFSYoti.MFSImage) -&gt; ()"
-                  moduleName = "MFSYoti"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nilofarvahabpoor/Desktop/MFSYoti/MFSYoti/Entity/MySuperCache.swift"
-                  timestampString = "534425664.517654"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "75"
-                  endingLineNumber = "75"
-                  offsetFromSymbolStart = "25">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in MFSYotiTests.CacheOrganiser.removeImageFromCache(image: MFSYotiTests.MFSImage) -&gt; ()"
-                  moduleName = "MFSYotiTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nilofarvahabpoor/Desktop/MFSYoti/MFSYoti/Entity/MySuperCache.swift"
-                  timestampString = "534425665.456359"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "75"
-                  endingLineNumber = "75"
-                  offsetFromSymbolStart = "25">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MFSYoti/Entity/MySuperCache.swift"
-            timestampString = "534425664.188139"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "removeImageFromCache(image:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in MFSYoti.CacheOrganiser.removeImageFromCache(image: MFSYoti.MFSImage) -&gt; ()"
-                  moduleName = "MFSYoti"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nilofarvahabpoor/Desktop/MFSYoti/MFSYoti/Entity/MySuperCache.swift"
-                  timestampString = "534425664.523247"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "77"
-                  endingLineNumber = "77"
-                  offsetFromSymbolStart = "263">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in MFSYotiTests.CacheOrganiser.removeImageFromCache(image: MFSYotiTests.MFSImage) -&gt; ()"
-                  moduleName = "MFSYotiTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nilofarvahabpoor/Desktop/MFSYoti/MFSYoti/Entity/MySuperCache.swift"
-                  timestampString = "534425665.459356"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "77"
-                  endingLineNumber = "77"
-                  offsetFromSymbolStart = "263">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MFSYoti/Entity/MySuperCache.swift"
-            timestampString = "534425664.188256"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "removeImageFromCache(image:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in MFSYoti.CacheOrganiser.removeImageFromCache(image: MFSYoti.MFSImage) -&gt; ()"
-                  moduleName = "MFSYoti"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nilofarvahabpoor/Desktop/MFSYoti/MFSYoti/Entity/MySuperCache.swift"
-                  timestampString = "534425664.534383"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "79"
-                  endingLineNumber = "79"
-                  offsetFromSymbolStart = "295">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in MFSYotiTests.CacheOrganiser.removeImageFromCache(image: MFSYotiTests.MFSImage) -&gt; ()"
-                  moduleName = "MFSYotiTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nilofarvahabpoor/Desktop/MFSYoti/MFSYoti/Entity/MySuperCache.swift"
-                  timestampString = "534425665.462606"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "79"
-                  endingLineNumber = "79"
-                  offsetFromSymbolStart = "295">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MFSYotiTests/MFSMySuperCacheTests.swift"
-            timestampString = "534425664.188378"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "testThatCacheCanRemoveImageWithIdentifier()"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "testThatImageNeedsRedownload()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1050,12 +680,60 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MFSYotiTests/MFSMySuperCacheTests.swift"
-            timestampString = "534425664.189236"
+            timestampString = "534433153.157946"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "testThatImageNeedsRedownload()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MFSYotiTests/MFSMySuperCacheTests.swift"
+            timestampString = "534433153.158316"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "testThatImageNeedsRedownload()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MFSYotiTests/MFSMySuperCacheTests.swift"
+            timestampString = "534433153.158656"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "56"
             endingLineNumber = "56"
-            landmarkName = "testThatCacheCanFindImageWithIdentifier()"
+            landmarkName = "testThatCacheCanRemoveImageWithIdentifier()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MFSYotiTests/MFSMySuperCacheTests.swift"
+            timestampString = "534433153.158929"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "testThatCacheCanRemoveImageWithIdentifier()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1066,11 +744,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MFSYoti/Networking/MFSController/MFSController.swift"
-            timestampString = "534425664.190035"
+            timestampString = "534444165.205542"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "getImage(imageId:completionBlock:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1082,75 +760,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MFSYoti/Networking/MFSController/MFSController.swift"
-            timestampString = "534425664.190138"
+            timestampString = "534444165.205883"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "getImage(imageId:completionBlock:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;MFSYoti.MFSImage&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__ObjC.UIImage&gt;) -&gt; () in MFSYoti.MFSController.getImage(imageId: Swift.String, completionBlock: (Swift.Optional&lt;__ObjC.UIImage&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MFSYoti"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nilofarvahabpoor/Desktop/MFSYoti/MFSYoti/Networking/MFSController/MFSController.swift"
-                  timestampString = "534425196.257181"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "332">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;MFSYoti.MFSImage&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__ObjC.UIImage&gt;) -&gt; () in MFSYoti.MFSController.getImage(imageId: Swift.String, completionBlock: (Swift.Optional&lt;__ObjC.UIImage&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MFSYoti"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nilofarvahabpoor/Desktop/MFSYoti/MFSYoti/Networking/MFSController/MFSController.swift"
-                  timestampString = "534425196.259493"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "854">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MFSYoti/Networking/MFSController/MFSController.swift"
-            timestampString = "534425664.190218"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "getImage(imageId:completionBlock:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MFSYoti/Networking/MFSController/MFSController.swift"
-            timestampString = "534425664.190301"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "getImage(imageId:completionBlock:)"
             landmarkType = "7">
             <Locations>
@@ -1162,11 +776,11 @@
                   moduleName = "MFSYoti"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nilofarvahabpoor/Desktop/MFSYoti/MFSYoti/Networking/MFSController/MFSController.swift"
-                  timestampString = "534425196.276836"
+                  timestampString = "534438876.344562"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
                   offsetFromSymbolStart = "34">
                </Location>
                <Location
@@ -1177,12 +791,12 @@
                   moduleName = "MFSYoti"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nilofarvahabpoor/Desktop/MFSYoti/MFSYoti/Networking/MFSController/MFSController.swift"
-                  timestampString = "534425196.279269"
+                  timestampString = "534438876.34578"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "45">
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "48">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1190,59 +804,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MFSYoti/Entity/MySuperCache.swift"
-            timestampString = "534425664.190388"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "findImageFromCache(urlString:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MFSYoti.CacheOrganiser.findImageFromCache(urlString: Swift.String) -&gt; Swift.Optional&lt;MFSYoti.MFSImage&gt;"
-                  moduleName = "MFSYoti"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nilofarvahabpoor/Desktop/MFSYoti/MFSYoti/Entity/MySuperCache.swift"
-                  timestampString = "534425664.543446"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "393">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MFSYotiTests.CacheOrganiser.findImageFromCache(urlString: Swift.String) -&gt; Swift.Optional&lt;MFSYotiTests.MFSImage&gt;"
-                  moduleName = "MFSYotiTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nilofarvahabpoor/Desktop/MFSYoti/MFSYoti/Entity/MySuperCache.swift"
-                  timestampString = "534425665.478462"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "393">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MFSYoti/ModelController/ModelFactory.swift"
-            timestampString = "534425664.190535"
+            timestampString = "534433153.159742"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "18"
@@ -1254,11 +820,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MFSYoti/ModelController/ModelFactory.swift"
-            timestampString = "534425664.190621"
+            timestampString = "534433153.16"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "17"
@@ -1270,11 +836,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MFSYoti/ModelController/ModelFactory.swift"
-            timestampString = "534425664.190696"
+            timestampString = "534433153.160139"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
@@ -1290,13 +856,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MFSYotiTests/MFSMySuperCacheTests.swift"
-            timestampString = "534425664.19077"
+            timestampString = "534433153.160271"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
-            landmarkName = "testThatThatCacheDisacrdOverMaxLimit()"
-            landmarkType = "7">
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "MFSMySuperCacheTests"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1306,12 +872,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MFSYotiTests/MFSMySuperCacheTests.swift"
-            timestampString = "534425664.192754"
+            timestampString = "534433153.161337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
-            landmarkName = "testThatThatCacheDisacrdOverMaxLimit()"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "tearDown()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1322,12 +888,154 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MFSYotiTests/MFSMySuperCacheTests.swift"
-            timestampString = "534425664.195988"
+            timestampString = "534433153.161783"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
-            landmarkName = "testThatThatCacheDisacrdOverMaxLimit()"
+            startingLineNumber = "117"
+            endingLineNumber = "117">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MFSYoti/Networking/MFSController/MFSController.swift"
+            timestampString = "534444165.208217"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "getImage(imageId:completionBlock:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MFSYoti/Networking/MFSController/MFSController.swift"
+            timestampString = "534444165.208988"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "getImage(imageId:completionBlock:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MFSYoti/Networking/MFSController/MFSController.swift"
+            timestampString = "534444165.209905"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "getImage(imageId:completionBlock:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__ObjC.UIImage&gt;) -&gt; () in MFSYoti.MFSController.getImage(imageId: Swift.String, completionBlock: (Swift.Optional&lt;__ObjC.UIImage&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MFSYoti"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nilofarvahabpoor/Desktop/MFSYoti/MFSYoti/Networking/MFSController/MFSController.swift"
+                  timestampString = "534438907.172276"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "665">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__ObjC.UIImage, __ObjC.HTTPURLResponse) -&gt; () in closure #1 (Swift.Optional&lt;__ObjC.UIImage&gt;) -&gt; () in MFSYoti.MFSController.getImage(imageId: Swift.String, completionBlock: (Swift.Optional&lt;__ObjC.UIImage&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MFSYoti"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nilofarvahabpoor/Desktop/MFSYoti/MFSYoti/Networking/MFSController/MFSController.swift"
+                  timestampString = "534438907.174271"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "61">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MFSYoti/Networking/MFSController/MFSController.swift"
+            timestampString = "534444165.210164"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "getImage(imageId:completionBlock:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MFSYoti/Networking/MFSController/MFSController.swift"
+            timestampString = "534444165.210378"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "getImage(imageId:completionBlock:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MFSYoti/Networking/DownloadManager.swift"
+            timestampString = "534442868.443196"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "getImage(url:httpResponse:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MFSYoti/Networking/DownloadManager.swift"
+            timestampString = "534442868.443349"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "urlSession(_:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

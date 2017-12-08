@@ -18,20 +18,24 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.collectionView.delegate = self
-        self.collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.dataSource = self
+
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        DownloadManager.shared.onProgress = nil
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        downloadButtonTapped(collectionView.cellForItem(at: IndexPath.init(item: 0, section: 0)) as! MFSCollectionViewCell)
 
-        let indexPathForFirstRow = NSIndexPath(item: 0, section: 0)
-        self.downloadButtonTapped(self.collectionView.cellForItem(at: indexPathForFirstRow as IndexPath) as! MFSCollectionViewCell)
     }
-    
+
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -50,14 +54,12 @@ extension ViewController: MFSCollectionViewCellDelegate {
     func downloadButtonTapped(_ cell: MFSCollectionViewCell) {
         if let indexPath = collectionView.indexPath(for: cell) {
             controller.getImage(imageId: controller.images[(indexPath.row)]) { (image) in
-                DispatchQueue.main.async {
-                    cell.updateDisplay(image: image!)
-                    cell.msfImgView.image = image
+                    DispatchQueue.main.async {
+                        cell.updateDisplay(image: image!)
                 }
             }
         }
     }
-
 }
 
 
