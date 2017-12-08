@@ -20,7 +20,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         collectionView.delegate = self
         collectionView.dataSource = self
-
     }
 
     override func viewWillDisappear(_ animated: Bool) {

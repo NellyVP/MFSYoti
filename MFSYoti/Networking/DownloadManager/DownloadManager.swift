@@ -57,7 +57,7 @@ class DownloadManager : NSObject, URLSessionDelegate, URLSessionDownloadDelegate
             if let onProgress = onProgress {
                 calculateProgress(session: session, completionHandler: onProgress)
             }
-            let progress = Float(totalBytesWritten) / Float(totalBytesExpectedToWrite)
+//            let progress = Float(totalBytesWritten) / Float(totalBytesExpectedToWrite)
             //debugPrint("Progress \(downloadTask) \(progress)")
             
         }

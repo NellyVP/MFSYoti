@@ -29,9 +29,10 @@ class MFSCollectionViewCell: UICollectionViewCell {
     }
     
     override func prepareForReuse() {
-        msfImgView.image = nil
-        downloadButton.isHidden = false
-        progressView.isHidden = true
+        super.prepareForReuse()
+//        msfImgView.image = nil
+//        downloadButton.isHidden = false
+//        progressView.isHidden = true
     }
     
     @IBAction func downloadButtonTapped(_ sender: AnyObject) {
