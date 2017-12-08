@@ -8,17 +8,19 @@
 
 import UIKit
 
-class MFSImage: NSObject {
+public class MFSImage: NSObject {
     var imageID: String?
     var imageData: NSData?
     var lastAccessTime: NSDate?
     var maxAge: Double?
     var accessCount: Int!
+    var imageURL: String?
     
     
-    init (imgID: String ,imgData: NSData, preAccessTime: NSDate, numberOfRetrieval: Int, cachePeriod: Double) {
+    init (imgID: String, imgURL: String, imgData: NSData, preAccessTime: NSDate, numberOfRetrieval: Int, cachePeriod: Double) {
         super.init()
         imageID         = imgID
+        imageURL        = imgURL
         imageData       = imgData
         lastAccessTime  = preAccessTime
         accessCount     = numberOfRetrieval

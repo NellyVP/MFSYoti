@@ -42,7 +42,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76M-rR-tbO" userLabel="Content View">
                                                     <rect key="frame" x="0.0" y="0.0" width="363" height="350"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xdx-0L-RsD">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xdx-0L-RsD">
                                                             <rect key="frame" x="4" y="8" width="355" height="296"/>
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVZ-5d-RQP">
@@ -85,9 +85,9 @@
                                             <constraint firstAttribute="bottom" secondItem="76M-rR-tbO" secondAttribute="bottom" id="b3d-aE-ij1"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="activityIdicator" destination="vRe-F9-X8W" id="Myn-JL-lFH"/>
                                             <outlet property="downloadButton" destination="HVZ-5d-RQP" id="Wh3-bd-Mum"/>
                                             <outlet property="msfImgView" destination="xdx-0L-RsD" id="Y3g-eK-ksJ"/>
-                                            <outlet property="progressView" destination="vRe-F9-X8W" id="OtW-0y-64Z"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

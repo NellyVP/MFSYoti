@@ -11,12 +11,20 @@ import XCTest
 class MFSMySuperCacheTests: XCTestCase {
     var cache: CacheOrganiser = CacheOrganiser()
     var baseMaxAge:Double = 6400
-    
+    let imageIdentifier = "Yoti"
+    let lookupUIImage = UIImage(named: "Yoti")
+
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
+    func createMFSImageFromUIImage() -> MFSImage {
+        let data = UIImagePNGRepresentation(lookupUIImage!)! as NSData
+        let mfsImg   = MFSImage(imgID: String().md5(imageIdentifier), imgURL: imageIdentifier, imgData: data, preAccessTime: Date() as NSDate, numberOfRetrieval: 1, cachePeriod: baseMaxAge)
+        return mfsImg
+        
+    }
     func testThatCacheOrganiserCanBeInitialized() {
         // Given
         var cache: CacheOrganiser? = CacheOrganiser()
@@ -28,17 +36,15 @@ class MFSMySuperCacheTests: XCTestCase {
         XCTAssertNil(cache, "cache should be nil after deinit")
     }
 
-    func testThatCacheOrganiserCanAddImageWithIdentifierAndMaxAge(){
+    func testThatCacheOrganiserCanAddImage(){
         // Given
-        let image = UIImage(named: "Refresh-icon")
-        let identifier = "refresh"
+        let image = createMFSImageFromUIImage()
         var cachedImage = UIImage()
-        
         // When
-        cache.add(image: image!, withIdentifier: identifier, maxAge: 6400)
-        
-        cache.get(imageAtURLString: identifier) { (image) in
+        cache.addImageToCache(image: image)
+        cache.get(imageAtURLString: imageIdentifier) { (image) in
             cachedImage = image!
+
         }
         // Then
         XCTAssertNotNil(cache.imagesCache, "cache.imagesCache should not be nil")
@@ -46,35 +52,86 @@ class MFSMySuperCacheTests: XCTestCase {
     }
     
     func testThatCacheCanFindImageWithIdentifier() {
-        // Given
-        let image = UIImage(named: "Refresh-icon")
-        let identifier = "refresh"
-        
+        //Given
+        let image = createMFSImageFromUIImage()
+
         // When
-        cache.add(image: image!, withIdentifier: identifier, maxAge: baseMaxAge)
-        let cachedImage = cache.findImageWithId(imageID: identifier)
+        cache.addImageToCache(image: image)
+        let cachedImage = cache.findImageFromCache(urlString: image.imageID!)
+        
+        // Then
         XCTAssertNotNil(cache.imagesCache, "cache.imagesCache should not be nil")
         XCTAssertNotNil(cachedImage, "cached image should not be nil")
 
     }
     
     func testThatCacheCanRemoveImageWithIdentifier() {
-        // Given
-        let image = UIImage(named: "Refresh-icon")
-        let identifier = "refresh"
+        //Given
+        let image = createMFSImageFromUIImage()
         
-        // When
-        cache.add(image: image!, withIdentifier: identifier, maxAge: baseMaxAge)
-        let cachedImageExists = cache.findImageWithId(imageID: identifier) != nil
-        let removedImage = cache.removeImageFromCache(identifier: identifier)
-        let checkIfImageExistsInCache = cache.findImageWithId(imageID: identifier) != nil
+        //When
+        cache.addImageToCache(image: image)
         
+        let cachedImageExists = cache.findImageFromCache(urlString: image.imageID!) != nil
+
+        cache.removeImageFromCache(image: image)
+
+        let checkIfImageExistsInCache = cache.findImageFromCache(urlString: image.imageID!) != nil
+
         // Then
         XCTAssertTrue(cachedImageExists, "cached image exists should be true")
-        XCTAssertTrue(removedImage, "removed image should be true")
         XCTAssertFalse(checkIfImageExistsInCache, "cached image exists after removal should be false")
     }
+
+    func testThatImageNeedsRedownload() {
+        //Given
+        baseMaxAge = -6400
+        let image = createMFSImageFromUIImage()
+        
+        //When
+        cache.addImageToCache(image: image)
+        let cachedImageExists = cache.findImageFromCache(urlString: image.imageID!) != nil
+        let checkIfImageNeedsDownload = cache.checkIfImageNeedsRedownload(image: image)
+       
+        // Then
+        XCTAssertTrue(cachedImageExists, "cached image exists should be true")
+        XCTAssertTrue(checkIfImageNeedsDownload, "cached image needs download should be true")
+    }
     
+    func testThatAccessingImageUpdatesAccessCount() {
+        //Given
+        let image = createMFSImageFromUIImage()
+        
+        //When
+        cache.addImageToCache(image: image)
+        
+        let cachedImage = cache.findImageFromCache(urlString: image.imageID!)
+        cache.updateImageAccessInfo(image: cachedImage!)
+        
+        let accessCount = cachedImage?.accessCount
+        let lastAccessDate = cachedImage?.lastAccessTime
+        
+        // Then
+        XCTAssertNotNil(cache.imagesCache, "cache.imagesCache should not be nil")
+        XCTAssertNotNil(cachedImage, "cachedImage should not be nil")
+
+        XCTAssertEqual(accessCount, 2, "Wrong access count")
+        XCTAssertNotNil(lastAccessDate, "cachedImage should not be nil")
+    }
+
+    func testThatThatCacheDisacrdOverMaxLimit() {
+        //Given
+        cache.kMaxNumberOfItems = 1
+        let image = createMFSImageFromUIImage()
+        
+        //When
+        cache.addImageToCache(image: image)
+        cache.checkTodiscardOverCacheLimit()
+        
+        // Then
+        XCTAssertTrue(cache.imagesCache.count == 0, "cache.imagesCache should be nil")
+
+    }
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()

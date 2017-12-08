@@ -3,3 +3,4 @@
 //
 
 #import "CALayer+ShadedRoundedLayer.h"
+#import <CommonCrypto/CommonDigest.h>

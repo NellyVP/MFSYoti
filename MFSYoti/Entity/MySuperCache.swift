@@ -8,129 +8,92 @@
 
 import Foundation
 import UIKit
-private let kMaxNumberOfItems: Int = 10000
+
 
 public protocol MySuperCache {
     func get(imageAtURLString imageURLString: String, completionBlock: @escaping (UIImage?) -> Void)
-    func add(image: UIImage, withIdentifier: String, maxAge:Double)
+    func addImageToCache(image:MFSImage)
 }
 
 open class CacheOrganiser: MySuperCache {
     var imagesCache = [MFSImage]()
     var maxAgeDoubleValue = 0.0
+    var kMaxNumberOfItems: Int = 10000
+
     
     public func get(imageAtURLString imageURLString: String, completionBlock: @escaping (UIImage?) -> Void) {
-        if let image = findImageWithId(imageID: imageURLString) {
-            self.discardImageOverMaxAgeLimit(withIdentifier: imageURLString, completion: { (needsDownload) in
-                if !needsDownload {
-                    completionBlock (image)
-                }
-                else {
-                    completionBlock (nil)
-                }
-            })
+        if let image = findImageFromCache(urlString: String().md5(imageURLString)) {
+            if checkIfImageNeedsRedownload(image: image) {
+                removeImageFromCache(image: image)
+                completionBlock(nil)
+            }
+            else {
+                updateImageAccessInfo(image: image)
+                completionBlock(UIImage(data:(image.imageData as Data?)!))
+            }
         }
         else {
-            completionBlock (nil)
-
+            completionBlock(nil)
         }
     }
-    
-    public func add(image: UIImage, withIdentifier: String, maxAge: Double) {
-        addImageToCache(image: image, withIdentifier: withIdentifier, maxAge:maxAge)
-    }
-    
-    func findImageWithId(imageID: String) -> UIImage? {
-        var retuningImage: MFSImage?
+    func findImageFromCache(urlString:String) -> MFSImage? {
+        var image: MFSImage?
         if (self.imagesCache.count > 0) {
-            for eachImage in self.imagesCache {
-                if eachImage.imageID == imageID {
+            for iteratingImg in self.imagesCache {                
+                if iteratingImg.imageID == urlString {
                     // imageFound
-                    eachImage.accessCount = Int(eachImage.accessCount + 1)
-                    eachImage.lastAccessTime = NSDate()
-                    retuningImage = eachImage
-                    return UIImage(data:(retuningImage?.imageData as Data?)!)
+                    image = iteratingImg
                 }
             }
         }
-        return nil
+        return image
     }
     
-    func addImageToCache(image: UIImage, withIdentifier: String, maxAge:Double) {
+    public func addImageToCache(image: MFSImage) {
         self.checkTodiscardOverCacheLimit()
-        let mfsImg = MFSImage (imgID: withIdentifier, imgData: (UIImagePNGRepresentation(image) as NSData?)!, preAccessTime: Date() as NSDate, numberOfRetrieval: 1, cachePeriod:maxAge)
-        imagesCache.append(mfsImg)
+        imagesCache.append(image)
     }
     
+    func updateImageAccessInfo(image:MFSImage) {
+        image.accessCount = Int(image.accessCount + 1)
+        image.lastAccessTime = NSDate()
+    }
+    
+    func checkIfImageNeedsRedownload(image:MFSImage) -> Bool {
+        let kDiscardInterval = -image.maxAge!
+        let lastAccessedTime = image.lastAccessTime?.timeIntervalSinceNow
+        let discardNeed = Double(lastAccessedTime!) < kDiscardInterval
+        return discardNeed
+    }
+    
+    func removeImageFromCache(image:MFSImage) -> Void {
+        var imagesCacheCopy = [MFSImage]()
+
+        let lockQueue = DispatchQueue(label: "self")
+        
+        lockQueue.sync {
+            imagesCacheCopy = self.imagesCache
+            if let index = self.imagesCache.index(of:image) {
+                imagesCacheCopy.remove(at:(index))
+            }
+            self.imagesCache = imagesCacheCopy
+        }
+    }
     func checkTodiscardOverCacheLimit() -> Void {
         var imagesCacheCopy = [MFSImage]()
         imagesCacheCopy = imagesCache
         if (imagesCacheCopy.count < kMaxNumberOfItems) {
             return
         }
-        DispatchQueue.global(qos: .userInitiated).async { // 1
-            //Order the cache array based on the least used image
+        
+        let lockQueue = DispatchQueue(label: "cacheQueue")
+        
+        lockQueue.sync {
             imagesCacheCopy.sort(by: { $0.accessCount < $1.accessCount })
             imagesCacheCopy.remove(at:(0))
-        }
-        DispatchQueue.main.async { // 2
-            let lockQueue = DispatchQueue(label: "self")
-            lockQueue.sync {
-                self.imagesCache = imagesCacheCopy
-            }
-        }
-    }
-    func discardImageOverMaxAgeLimit(withIdentifier identifier: String, completion: @escaping (_ imageDiscarded: Bool) -> Void) {
-        //if imageMax age is gone - then discharge it
-        //What if there is no age limit?
-        //Then discard the image and download again
-        var imagesCacheCopy = [MFSImage]()
-        
-        for img in self.imagesCache {
-            if img.imageID == identifier {
-                //image found
-                let kDiscardInterval = -img.maxAge!
-                let lastAccessedTime = img.lastAccessTime?.timeIntervalSinceNow
-                let discardNeed = Double(lastAccessedTime!) < kDiscardInterval
-                if (discardNeed) {
-                    let lockQueue = DispatchQueue(label: "self")
-                    
-                    lockQueue.sync {
-                        imagesCacheCopy = self.imagesCache
-                    }
-                    DispatchQueue.global(qos: .userInitiated).async {
-                        // 1
-                        //Order the cache array based on the least used image
-                        if let index = self.imagesCache.index(of:img) {
-                            imagesCacheCopy.remove(at:(index))
-                        }
-                        
-                        DispatchQueue.main.async { // 2
-                            let lockQueue = DispatchQueue(label: "self")
-                            lockQueue.sync {
-                                self.imagesCache = imagesCacheCopy
-                            }
-                        }
-                    }
-                }
-                completion (discardNeed)
-            }
-            
-        }
-    }
-    
-    func removeImageFromCache(identifier: String) -> Bool{
+            self.imagesCache = imagesCacheCopy
 
-        var removed = false
-        for img in self.imagesCache {
-            if img.imageID == identifier {
-                if let index = self.imagesCache.index(of:img) {
-                    self.imagesCache.remove(at:(index))
-                    removed = true
-                }
-            }
         }
-        return removed
     }
 }
 
