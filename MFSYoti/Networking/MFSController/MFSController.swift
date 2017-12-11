@@ -1,4 +1,3 @@
-
 //
 //  SlideShowController.swift
 //  MyFirstSlideshow
@@ -17,21 +16,28 @@ class MFSController: NSObject {
                                  "http://www.kapstadt.de/webcam.jpg"]
     
     var modelFactory = ModelFactory()
-
+    
     func getImage(imageId: String, completionBlock: @escaping (UIImage?) -> Void) {
-        let task = DownloadManager.shared.activate().downloadTask(with: URL(string: imageId)!)
-        DownloadManager.shared.onCompletionHandler = { (image, response, error) in
-            if error == nil {
-                let mfsImg = self.modelFactory.createImageFrom(urlString: imageId, data: UIImagePNGRepresentation(image!)!, response: response )
-                CacheOrganiser.sharedCache.addImageToCache(image: mfsImg)
-                completionBlock(image)
+        CacheOrganiser.sharedCache.get(imageAtURLString: imageId) { (image) in
+            if image != nil {
+                completionBlock (image)
             }
             else {
-                // notify of the error.
-                completionBlock(nil)
+                let task = DownloadManager.shared.activate().downloadTask(with: URL(string: imageId)!)
+                DownloadManager.shared.onCompletionHandler = { (image, response, error) in
+                    if !(error != nil) {
+                        let mfsImg = self.modelFactory.createImageFrom(urlString: imageId, data: UIImagePNGRepresentation(image!)!, response: response )
+                        CacheOrganiser.sharedCache.addImageToCache(image: mfsImg)
+                        completionBlock(image)
+                    }
+                    else {
+                        completionBlock (nil)
+                    }
+                   
+                }
+                task.resume()
             }
         }
-        task.resume()
     }
 }
- 
+

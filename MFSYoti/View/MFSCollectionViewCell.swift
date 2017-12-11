@@ -30,12 +30,12 @@ class MFSCollectionViewCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-//        msfImgView.image = nil
-//        downloadButton.isHidden = false
-//        progressView.isHidden = true
     }
     
     @IBAction func downloadButtonTapped(_ sender: AnyObject) {
+        if ((msfImgView.image) != nil) {
+            msfImgView.image = nil
+        }
         activityIdicator.startAnimating()
         downloadButton.isHidden = true
         progressView.isHidden = false
