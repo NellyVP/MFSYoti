@@ -16,10 +16,12 @@ public protocol MySuperCache {
 }
 
 open class CacheOrganiser: MySuperCache {
+    static var sharedCache = CacheOrganiser()
+    private init() {}
+    
     var imagesCache = [MFSImage]()
     var maxAgeDoubleValue = 0.0
     var kMaxNumberOfItems: Int = 10000
-
     
     public func get(imageAtURLString imageURLString: String, completionBlock: @escaping (UIImage?) -> Void) {
         if let image = findImageFromCache(urlString: String().md5(imageURLString)) {

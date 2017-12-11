@@ -23,6 +23,4 @@ class ModelFactory: NSObject {
         let image:MFSImage = MFSImage(imgID: String().md5(urlString), imgURL: urlString, imgData: data as NSData, preAccessTime: Date() as NSDate, numberOfRetrieval: 1, cachePeriod: maxAgeDoubleValue)
         return image
     }
-    
-    
 }

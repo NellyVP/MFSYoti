@@ -5,37 +5,30 @@
 //  Created by Nilofar Vahab poor on 05/12/2017.
 //  Copyright © 2017 Nilofar Vahab poor. All rights reserved.
 //
-
 import XCTest
+@testable import MFSYoti
+
+
+
 class MFSMySuperCacheTests: BaseTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-
-    func testThatCacheOrganiserCanBeInitialized() {
-        // Given
-        var cache: CacheOrganiser? = CacheOrganiser()
-        
-        // When
-        cache = nil
-        
-        // Then
-        XCTAssertNil(cache, "cache should be nil after deinit")
-    }
-
     func testThatCacheOrganiserCanAddImage(){
         // Given
         let image = createMFSImageFromUIImage()
         var cachedImage = UIImage()
+        
+
         // When
-        cache.addImageToCache(image: image)
-        cache.get(imageAtURLString: imageIdentifier) { (image) in
+        CacheOrganiser.sharedCache.addImageToCache(image: image)
+        CacheOrganiser.sharedCache.get(imageAtURLString: imageIdentifier) { (image) in
             cachedImage = image!
 
         }
         // Then
-        XCTAssertNotNil(cache.imagesCache, "cache.imagesCache should not be nil")
+        XCTAssertNotNil(CacheOrganiser.sharedCache.imagesCache, "cache.imagesCache should not be nil")
         XCTAssertNotNil(cachedImage, "cached image should not be nil")
     }
     
@@ -44,11 +37,11 @@ class MFSMySuperCacheTests: BaseTestCase {
         let image = createMFSImageFromUIImage()
 
         // When
-        cache.addImageToCache(image: image)
-        let cachedImage = cache.findImageFromCache(urlString: image.imageID!)
+        CacheOrganiser.sharedCache.addImageToCache(image: image)
+        let cachedImage = CacheOrganiser.sharedCache.findImageFromCache(urlString: image.imageID!)
         
         // Then
-        XCTAssertNotNil(cache.imagesCache, "cache.imagesCache should not be nil")
+        XCTAssertNotNil(CacheOrganiser.sharedCache.imagesCache, "cache.imagesCache should not be nil")
         XCTAssertNotNil(cachedImage, "cached image should not be nil")
 
     }
@@ -58,13 +51,13 @@ class MFSMySuperCacheTests: BaseTestCase {
         let image = createMFSImageFromUIImage()
         
         //When
-        cache.addImageToCache(image: image)
+        CacheOrganiser.sharedCache.addImageToCache(image: image)
         
-        let cachedImageExists = cache.findImageFromCache(urlString: image.imageID!) != nil
+        let cachedImageExists = CacheOrganiser.sharedCache.findImageFromCache(urlString: image.imageID!) != nil
 
-        cache.removeImageFromCache(image: image)
+        CacheOrganiser.sharedCache.removeImageFromCache(image: image)
 
-        let checkIfImageExistsInCache = cache.findImageFromCache(urlString: image.imageID!) != nil
+        let checkIfImageExistsInCache = CacheOrganiser.sharedCache.findImageFromCache(urlString: image.imageID!) != nil
 
         // Then
         XCTAssertTrue(cachedImageExists, "cached image exists should be true")
@@ -77,9 +70,9 @@ class MFSMySuperCacheTests: BaseTestCase {
         let image = createMFSImageFromUIImage()
         
         //When
-        cache.addImageToCache(image: image)
-        let cachedImageExists = cache.findImageFromCache(urlString: image.imageID!) != nil
-        let checkIfImageNeedsDownload = cache.checkIfImageNeedsRedownload(image: image)
+        CacheOrganiser.sharedCache.addImageToCache(image: image)
+        let cachedImageExists = CacheOrganiser.sharedCache.findImageFromCache(urlString: image.imageID!) != nil
+        let checkIfImageNeedsDownload = CacheOrganiser.sharedCache.checkIfImageNeedsRedownload(image: image)
        
         // Then
         XCTAssertTrue(cachedImageExists, "cached image exists should be true")
@@ -91,16 +84,16 @@ class MFSMySuperCacheTests: BaseTestCase {
         let image = createMFSImageFromUIImage()
         
         //When
-        cache.addImageToCache(image: image)
+        CacheOrganiser.sharedCache.addImageToCache(image: image)
         
-        let cachedImage = cache.findImageFromCache(urlString: image.imageID!)
-        cache.updateImageAccessInfo(image: cachedImage!)
+        let cachedImage = CacheOrganiser.sharedCache.findImageFromCache(urlString: image.imageID!)
+        CacheOrganiser.sharedCache.updateImageAccessInfo(image: cachedImage!)
         
         let accessCount = cachedImage?.accessCount
         let lastAccessDate = cachedImage?.lastAccessTime
         
         // Then
-        XCTAssertNotNil(cache.imagesCache, "cache.imagesCache should not be nil")
+        XCTAssertNotNil(CacheOrganiser.sharedCache.imagesCache, "cache.imagesCache should not be nil")
         XCTAssertNotNil(cachedImage, "cachedImage should not be nil")
 
         XCTAssertEqual(accessCount, 2, "Wrong access count")
@@ -109,15 +102,15 @@ class MFSMySuperCacheTests: BaseTestCase {
 
     func testThatThatCacheDisacrdOverMaxLimit() {
         //Given
-        cache.kMaxNumberOfItems = 1
+        CacheOrganiser.sharedCache.kMaxNumberOfItems = 1
         let image = createMFSImageFromUIImage()
         
         //When
-        cache.addImageToCache(image: image)
-        cache.checkTodiscardOverCacheLimit()
+        CacheOrganiser.sharedCache.addImageToCache(image: image)
+        CacheOrganiser.sharedCache.checkTodiscardOverCacheLimit()
         
         // Then
-        XCTAssertTrue(cache.imagesCache.count == 0, "cache.imagesCache should be nil")
+        XCTAssertTrue(CacheOrganiser.sharedCache.imagesCache.count == 0, "cache.imagesCache should be nil")
 
     }
     override func tearDown() {

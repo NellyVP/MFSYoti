@@ -5,12 +5,11 @@
 //  Created by Nilofar Vahab poor on 08/12/2017.
 //  Copyright © 2017 Nilofar Vahab poor. All rights reserved.
 //
-import MFSYoti
 import XCTest
+@testable import MFSYoti
 
 class BaseTestCase: XCTestCase {
     let lookupUIImage = UIImage(named: "Yoti")
-    var cache: CacheOrganiser = CacheOrganiser()
     var baseMaxAge:Double = 6400
     let imageIdentifier = "Yoti"
     
